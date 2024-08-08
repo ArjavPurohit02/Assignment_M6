@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Card Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .profile-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .profile-img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        .profile-info {
+            display: none;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: lightskyblue;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: lightskyblue;
+        }
+        body{
+            background-color: lightseagreen;
+        }
+        .profile-card{
+            background-color: lightsteelblue;
+        } 
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <img src="Arjav.JPG" alt="Profile Picture" class="profile-img">
+        <h2>Arjav Purohit</h2>
+        <button id="seeProfileButton">See Profile</button>
+        <div id="profileInfo" class="profile-info">
+            <p>Name : Arjav Purohit</p>
+            <p>Email : purohitarjav3612@gmail.com</p>
+            <p>Contact Number : +917016559531</p>
+            <p>Address : 21,Ashish Society Behind Neesarg Honda Showroom Deesa Highway Palanpur</p>
+        </div>
+    </div>
+
+    <script>
+        // Function to show the profile information
+        function showProfileInfo() {
+            const profileInfo = document.getElementById('profileInfo');
+            profileInfo.style.display = 'block';
+        }
+
+        // Wait for the DOM to load before adding the event listener
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const button = document.getElementById('seeProfileButton');
+            button.addEventListener('click', showProfileInfo);
+        });
+    </script>
+</body>
+</html>
